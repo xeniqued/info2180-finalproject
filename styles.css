@@ -37,15 +37,14 @@ body{
     display: flex;
     width: 15%; 
     height: 100vh;
-    position:auto;
-    padding-right: 20px;
-    padding-bottom: 0%;
+    padding-right: 5px;
     background-color: #FFFFFF;
     border-right: 1px solid #ccc;
     font-family:'Arial', sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: black;
+    min-width: 200px;
 
 }
 
@@ -62,6 +61,7 @@ li img{
 
 .menu li{
     margin: 5px;
+    padding-right: 20px;
 }
 
 /* Styling the navigation links text */
@@ -112,7 +112,7 @@ li img{
 
 
 /* Styling the add contact button */
-.add-contact  {
+.add-user {
     background-color: #5129e3;
     text-decoration: none;
     text-align: center;
@@ -137,32 +137,7 @@ li img{
     background-color: #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling the filter section */
-.filters {
-    margin: 20px;
-}
-
-.filters span {
-    font-weight: bold;
-}
-
-/* Styling the filter links */
-
-.filters a {
-    text-decoration: none;
-    margin-right: 15px;
-    color: #959b9f;
-    position: relative;
-    display: inline-block;
-}
-
-.filters a.active {
-    font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 10px; 
-    color: #5129e3;
+  color: #5129e3;
 }
 
 
@@ -198,9 +173,6 @@ li img{
     word-wrap: break-word;
 }
 
-.data-table #type{
-    text-align: center;
-}
 
 #name{
     font-family: Arial, Helvetica, sans-serif;
@@ -216,13 +188,6 @@ li img{
     text-align: left;
 }
 
-#view a{
-    font-family: Arial, Helvetica, sans-serif;
-    color:#5129e3;
-    text-decoration: none;
-
-}
-
 
 .data-table th {
     background-color: #f4f4f4;
@@ -231,26 +196,4 @@ li img{
     font-size: 16px;
     font-weight: bold;
     color: black;
-}
-
-
-/* Styling the information in the table */
-.data-table td .badge {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 13px;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.badge.sales-lead {
-    background-color: #ffd341;
-    color: black;
-}
-
-.badge.support {
-    background-color: #4d41d3;
-    color: white;
 }
