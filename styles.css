@@ -35,8 +35,9 @@ body{
 
 .menu {
     display: flex;
-    width: 15%; 
-    height: 100vh;
+    flex-direction: column;
+    min-width: 10%;
+    height: 120vh;
     position:auto;
     padding-right: 20px;
     padding-bottom: 0%;
@@ -46,7 +47,7 @@ body{
     font-size: 20px;
     font-weight: bold;
     color: black;
-    min-width: 200px;
+    
 
 }
 
