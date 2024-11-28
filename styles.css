@@ -125,7 +125,7 @@ li img{
 }
 
 /* Styling the add contact button when hovering */
-.add-contact:hover{
+.add-user:hover{
     background-color: #48377d;
     color: white;
 }
