@@ -61,7 +61,14 @@ li img{
 
 .menu li{
     margin: 5px;
-    padding-right: 20px;
+    padding-right: 90px;
+}
+
+#line{
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-right: 10px;
+    margin-left: 0px;
 }
 
 /* Styling the navigation links text */
@@ -125,7 +132,7 @@ li img{
 }
 
 /* Styling the add contact button when hovering */
-.add-contact:hover{
+.add-user:hover{
     background-color: #48377d;
     color: white;
 }
@@ -137,63 +144,67 @@ li img{
     background-color: #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: #5129e3;
+    padding: 30px;
 }
 
+/* Styling the user form */
+.form-container{
+    display: flex;
+    justify-content: space-between;
+}
 
-/* Table */
-
-.data-table-section {
+.form-left,
+.form-right{
     display: flex;
     flex-direction: column;
-    width: calc(100%-40px);
-    padding: 20px;
-    overflow-x: auto;
-    border-radius: 10px;
-    
+    width: 45%;
+    gap: 15px;
 }
 
-.data-table {
+label{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #3e4652;
+    margin-bottom: 5px;
+}   
+
+input,
+select{
     width: 100%;
-    border-spacing: 0;
-    border-collapse: separate;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: white;
-    table-layout: auto;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    
-}
-
-.data-table th,
-.data-table td {
-    padding: 14px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    word-wrap: break-word;
-}
-
-
-#name{
+    font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     color: black;
-    text-align: left;
+    margin-bottom: 10px;
 }
 
-#row-format{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    color: #717374;
-    text-align: left;
+#save-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+button.save{
+    background-color: #5129e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+button.save:hover{
+    background-color: #48377d;
+    color: white;
 }
 
 
-.data-table th {
-    background-color: #f4f4f4;
-    flex: 1;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-}
+
+
+
