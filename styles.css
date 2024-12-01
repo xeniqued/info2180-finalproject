@@ -220,7 +220,8 @@ button {
     margin-bottom: 5px;
 }
 
-.value {
+.email-value, .telephone-value,
+.company-value, .assignedto-value {
     display: block; /* Ensures the value is on its own line */
 }
 

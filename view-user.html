@@ -9,8 +9,8 @@
 </head>
 <body>
      <!-- Header -->
-
-     <header id = "header">
+    <scripts src="view.js"></scripts>
+    <header id = "header">
         <div class = "logo">
             <img src = "dolphin.png" alt = "Dolphin Logo" width = "30px" height = "25px" align = "center">Dolphin CRM
         </div>
@@ -37,7 +37,7 @@
               <!-- Left Side: Profile Info -->
               <div class="profile-info">
                 <img src="greyprofile.png" alt="Grey Profile icon" class="profile-image">
-                <h1 class="in-line">Mr. Michael Scott</h1>
+                <h1 class="in-line"></h1>
               </div>
               <!-- Right Side: Buttons -->
               <div class="buttons">
@@ -45,19 +45,19 @@
                 <button class="switch"><img src="switch.png" class="button-icon">Switch to Sales Lead</button>
               </div>
             </div>
-            <p>Created by November 9, 2022 by David Wallace</p>
-            <p>Updated on November 13, 2022</p>
+            <p class="created-value"></p>
+            <p class="updated-value"></p>
             <div class="bio-section">
                 <div class="contact-info">
                   <!-- Email and Telephone Row -->
                   <div class="contact-row">
                     <div class="contact-item">
                       <div class="label">Email:</div>
-                      <div class="value">michael.scott@paper.co</div>
+                      <div class="email-value"></div>
                     </div>
                     <div class="contact-item">
                       <div class="label">Telephone:</div>
-                      <div class="value">876-999-9999</div>
+                      <div class="telephone-value"></div>
                     </div>
                   </div>
             
@@ -65,11 +65,11 @@
                   <div class="contact-row">
                     <div class="contact-item">
                       <div class="label">Company:</div>
-                      <div class="value">The Paper Company</div>
+                      <div class="company-value"></div>
                     </div>
                     <div class="contact-item">
                       <div class="label">Assigned To:</div>
-                      <div class="value">John Doe</div>
+                      <div class="assignedto-value"></div>
                     </div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@
             </div>
             <div class="contact-note">
                 <form>
-                  <label for="note-title" class="cwidth">Add a note about Michael:</label><br>
+                  <label for="note-title" class="cwidth">Add a note about:</label><br>
                   <textarea id="note-text" name="note-text" class="cwidth">Enter details here</textarea>
                 </form>
               </div>
