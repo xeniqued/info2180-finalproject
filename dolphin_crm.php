@@ -83,6 +83,4 @@ if($_SESSION['role'] == 'admin') {
     </tbody>
   </table>
 <?php
-/*
-
-}
+}*/
