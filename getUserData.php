@@ -3,8 +3,8 @@ header('Content-Type: application/json');
 
 // Database connection details
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "admin";
+$password = "admin123";
 $dbname = "dolphin_crm";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
