@@ -113,25 +113,6 @@ li img{
 }
 
 
-/* Styling the add contact button */
-.add-user {
-    background-color: #5129e3;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-/* Styling the add contact button when hovering */
-.add-user:hover{
-    background-color: #48377d;
-    color: white;
-}
-
 /* Styling the data section */
 .data-section{
     margin-left: 25px;
