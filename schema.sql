@@ -56,17 +56,17 @@ INSERT INTO Users (firstname, lastname, password, email) VALUES
 
 
 INSERT INTO Contacts (title, firstname, lastname, email, telephone, company, type, assigned_to, created_by, created_at, updated_at) VALUES
-('Mr.', 'Michael', 'Scott', 'michael.scott@dundermifflin.com', '555-1234', 'Dunder Mifflin Paper Co.', 'Sales Lead', 1, 3, '2024-06-06 08:00:00', '2024-06-06 09:30:00'),
-('Mr.', 'Dwight', 'Schrute', 'dwight.schrute@schrute-farms.com', '555-2345', 'Schrute Farms', 'Support', 4, 1, '2024-06-06 09:00:00', '2024-06-06 09:45:00'),
-('Ms.', 'Pam', 'Beesly', 'pam.beesly@dundermifflin.com', '555-3456', 'Dunder Mifflin Paper Co.', 'Sales Lead', 1, 4, '2024-06-06 10:30:00', '2024-06-06 11:15:00'),
-('Mr.', 'Jim', 'Halpert', 'jim.halpert@dundermifflin.com', '555-4567', 'Dunder Mifflin Paper Co.', 'Support', 3, 1, '2024-06-06 11:00:00', '2024-06-06 12:00:00'),
-('Ms.', 'Angela', 'Martin', 'angela.martin@dundermifflin.com', '555-5678', 'Dunder Mifflin Paper Co.', 'Sales Lead', 7, 3, '2024-06-06 12:30:00', '2024-06-06 13:00:00'),
-('Mr.', 'Kevin', 'Malone', 'kevin.malone@dundermifflin.com', '555-6789', 'Dunder Mifflin Paper Co.', 'Support', 8, 9, '2024-06-06 14:00:00', '2024-06-06 15:00:00'),
-('Mr.', 'Stanley', 'Hudson', 'stanley.hudson@dundermifflin.com', '555-7890', 'Dunder Mifflin Paper Co.', 'Sales Lead', 1, 3, '2024-06-06 15:30:00', '2024-06-06 16:00:00'),
-('Ms.', 'Kelly', 'Kapoor', 'kelly.kapoor@dundermifflin.com', '555-8901', 'Dunder Mifflin Paper Co.', 'Sales Lead', 9, 1, '2024-06-06 16:45:00', '2024-06-06 17:30:00'),
-('Mr.', 'Ryan', 'Howard', 'ryan.howard@temp.com', '555-9012', 'Temp Agency', 'Support', 1, 10, '2024-06-06 17:45:00', '2024-06-06 18:00:00'),
-('Ms.', 'Jan', 'Levinson', 'jan.levinson@corporate.com', '555-0123', 'Dunder Mifflin Corporate', 'Sales Lead', 1, 9, '2024-06-06 18:30:00', '2024-06-06 19:00:00'),
-('Mr.', 'Creed', 'Bratton', 'creed.bratton@dundermifflin.com', '555-1111', 'Dunder Mifflin Paper Co.', 'Support', 3, 4, '2024-06-06 19:30:00', '2024-06-06 20:00:00');
+('Mr.', 'Michael', 'Scott', 'michael.scott@dundermifflin.com', '555-1234', 'Dunder Mifflin Paper Co.', 'Sales Lead', 'Jen Levison', 3, '2024-06-06 08:00:00', '2024-06-06 09:30:00'),
+('Mr.', 'Dwight', 'Schrute', 'dwight.schrute@schrute-farms.com', '555-2345', 'Schrute Farms', 'Support', 'Morris Dawman', 1, '2024-06-06 09:00:00', '2024-06-06 09:45:00'),
+('Ms.', 'Pam', 'Beesly', 'pam.beesly@dundermifflin.com', '555-3456', 'Dunder Mifflin Paper Co.', 'Sales Lead', 'Gilbert Rawford', 4, '2024-06-06 10:30:00', '2024-06-06 11:15:00'),
+('Mr.', 'Jim', 'Halpert', 'jim.halpert@dundermifflin.com', '555-4567', 'Dunder Mifflin Paper Co.', 'Support', 'Schumann Kaul', 1, '2024-06-06 11:00:00', '2024-06-06 12:00:00'),
+('Ms.', 'Angela', 'Martin', 'angela.martin@dundermifflin.com', '555-5678', 'Dunder Mifflin Paper Co.', 'Sales Lead', 'Sylvestor Stalling', 3, '2024-06-06 12:30:00', '2024-06-06 13:00:00'),
+('Mr.', 'Kevin', 'Malone', 'kevin.malone@dundermifflin.com', '555-6789', 'Dunder Mifflin Paper Co.', 'Support', 'Gammah Mason', 9, '2024-06-06 14:00:00', '2024-06-06 15:00:00'),
+('Mr.', 'Stanley', 'Hudson', 'stanley.hudson@dundermifflin.com', '555-7890', 'Dunder Mifflin Paper Co.', 'Sales Lead', 'Paul Peters', 3, '2024-06-06 15:30:00', '2024-06-06 16:00:00'),
+('Ms.', 'Kelly', 'Kapoor', 'kelly.kapoor@dundermifflin.com', '555-8901', 'Dunder Mifflin Paper Co.', 'Sales Lead', 'Stephen Hawker', 1, '2024-06-06 16:45:00', '2024-06-06 17:30:00'),
+('Mr.', 'Ryan', 'Howard', 'ryan.howard@temp.com', '555-9012', 'Temp Agency', 'Support', 'Jewel Nice', 10, '2024-06-06 17:45:00', '2024-06-06 18:00:00'),
+('Ms.', 'Jan', 'Levinson', 'jan.levinson@corporate.com', '555-0123', 'Dunder Mifflin Corporate', 'Sales Lead', 'Carl Barter', 9, '2024-06-06 18:30:00', '2024-06-06 19:00:00'),
+('Mr.', 'Creed', 'Bratton', 'creed.bratton@dundermifflin.com', '555-1111', 'Dunder Mifflin Paper Co.', 'Support', 'Jennifer Johnson', 4, '2024-06-06 19:30:00', '2024-06-06 20:00:00');
 
 INSERT INTO Notes (contact_id, comment, created_by, created_at) VALUES
 (1, 'Followed up with Michael regarding bulk paper order. He mentioned needing time to decide.', 3, '2024-06-06 09:45:00'),
