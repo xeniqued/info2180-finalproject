@@ -223,12 +223,10 @@ select{
     .form-left,
     .form-right {
         width: 100%; 
+        margin: 5px;
         padding: 0; 
     }
 
-    .form-right {
-        padding-top: 0; 
-    }
 
     button.save {
         width: 100%; 
