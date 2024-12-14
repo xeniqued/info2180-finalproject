@@ -26,7 +26,7 @@
                         <li> <a href="#"> <img src = "home.png" alt = "Home" width=" 15px" height = "15px"> Home </a> </li>
                         <li> <a href = "#"> <img src=" new_contact.png" alt = "New Contact" width=" 16px" height = "15px"> New Contact </a></li>
                         <li> <a href = "#"> <img src = "users.png" alt = "Users" width=" 15px" height = "15px"> Users </a></li>
-                        <hr id = "line">
+                        <hr>
                         <li> <a href = "#"> <img src = "logout.png" alt = "Logout" width=" 15px" height = "15px"> Logout </a></li>
     
                     </ul>
@@ -43,18 +43,21 @@
 
                 <!-- Adding the data section  -->
                 <div class = "data-section">
+                        
+                    <div class = "title">
+                        <label> Title 
+                                <select id = "select" name = "title" required>
+                                    <option value = "Mr"> Mr </option>
+                                    <option value = "Ms"> Ms </option>
+                                    <option value = "Mrs"> Mrs </option>
+                                </select>
+                        </label>
+                    </div>
 
-                    <!-- Left side form items -->
                     <form class = "form-container">
+                    <div class = 'form-holder'>
+                        <!-- Left side form items -->
                         <div class = "form-left">
-                            <label> Title 
-                                    <select id = "select" name = "title" required>
-                                        <option value = "Mr"> Mr </option>
-                                        <option value = "Ms"> Ms </option>
-                                        <option value = "Mrs"> Mrs </option>
-                                    </select>
-                            </label>
-                            
                             <label for = "fname"> First Name 
                                 <input type = "text" class = "fname" placeholder = "Jane" required>
                             </label>  
@@ -75,8 +78,6 @@
                             </label> 
                         </div>
 
-                    
-                        
 
                         <!-- Right side form items -->
                         <div class = "form-right">
@@ -94,13 +95,17 @@
                                     <option value = "Support"> Support </option>
                                 </select>
                             </label> 
+                        </div>
+                    </div>
 
-                    </form>
-                        
                     <!-- Adding the save button -->
                     <div id = "save-button">
                         <button class = "save"> Save </button>
                     </div>
+
+                    </form>
+                        
+                    
                     
                 </div>
 
