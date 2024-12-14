@@ -1,6 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
     const filterOptions = document.querySelectorAll(".filter-option");
     const tableRows = document.querySelectorAll(".table-row");
+    // const div = document.querySelectorAll(".data-table-section");
+    const div = document.getElementsByClassName("data-table-section")[0];
+
+    function myfunction () {
+        // var input = document.getElementById('country').value.trim();
+        // let url = `world.php?country=${encodeURIComponent(input)}`;
+
+        fetch('dashboard.php')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                // return response.text();
+                alert(data);
+                div.innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching countries:', error));
+    }
+    myfunction ();
 
     // Function to reset all rows to visible
     function resetRows() {
