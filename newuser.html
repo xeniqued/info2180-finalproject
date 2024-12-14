@@ -38,7 +38,7 @@
             <div class = "main-content">
                 <!--  Headers for the dashboard -->
                 <div class = "header-main">
-                    <h1> New Contact </h1>
+                    <h1> New User </h1>
                 </div>
 
                 <!-- Adding the data section  -->
@@ -47,17 +47,6 @@
                     <!-- Left side form items -->
                     <form class = "form-container">
                         <div class = "form-left">
-                            <div class = "title">
-                                <label> Title 
-                                        <select id = "select" name = "title" required>
-                                            <option value = "Mr"> Mr </option>
-                                            <option value = "Ms"> Ms </option>
-                                            <option value = "Mrs"> Mrs </option>
-                                        </select>
-                                </label>
-                            </div>
-
-                            
                             <label for = "fname"> First Name 
                                 <input type = "text" class = "fname" placeholder = "Jane" required>
                             </label>  
@@ -66,14 +55,10 @@
                                 <input type = "email" id = "email" placeholder = "something@example.com" required>
                             </label> 
 
-                            <label for = "company">Company
-                                <input type = "text" id = "company" required>
-                            </label>  
-
-                            <label for = "assigned">Assigned To 
-                                <select id = "assigned-select" required>
-                                    <option value = "admin"> Andy Bernard </option>
-                                    <option value = "Jane Doe"> Jane Doe </option>
+                            <label for = "role">Role
+                                <select id = "role-select" required>
+                                    <option value = "Member"> Member </option>
+                                    <option value = "Administrator"> Administrator </option>
                                 </select>
                             </label> 
                         </div>
@@ -87,16 +72,10 @@
                                 <input type = "text" id = "lname" placeholder = "Doe" required>
                             </label>
 
-                            <label for = "phone">Telephone
-                                <input type = "tel" id = "phone"  required>
-                            </label>  
-
-                            <label for = "type" >Type
-                                <select id = "type-select" name = "type" required>
-                                    <option value = "Sales Lead"> Sales Lead </option>
-                                    <option value = "Support"> Support </option>
-                                </select>
-                            </label> 
+                            <label for = "password">Password
+                                <input type = "password" id = "password" required>
+                            </label>
+                                
 
                     </form>
                         
