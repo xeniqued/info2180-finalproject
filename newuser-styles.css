@@ -116,19 +116,22 @@ li img{
 
 /* Styling the data section */
 .data-section{
+    display: flex;
+    flex-direction: column;
     margin-left: 25px;
     margin-right: 5px;
     background-color: #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 20px;
 }
 
 /* Styling the user form */
 .form-container{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    
+    width: 100%;
 }
 
 .title{
@@ -139,28 +142,21 @@ li img{
     padding-right: 20px;
 }
 
-.form-holder{
-    display: flex;
-    flex-direction: row;
-    padding-top: 20px;
-    width: 100%;
-}
-
 .form-left{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 49%;
     gap: 15px;
-    padding-left: 50px;
     
 }
 
 .form-right{
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
-    width: 40%;
+    margin-left: 20px;
+    width: 50%;
     gap: 15px;
+    padding-top: 83px;
 }
 
 label{
@@ -174,6 +170,7 @@ label{
 input,
 select{
     width: 100%;
+    box-sizing: border-box;
     padding: 8px 10px;
     margin-top: 8px;
     border: 1px solid #ccc;
@@ -186,27 +183,58 @@ select{
 
 #save-button{
     display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+    flex-direction: row-reverse;
+    margin-top: 80px;
+    width: 100%;
 }
 
-button.save{
+#save{
     background-color: #5129e3;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     color: white;
     border: none;
-    padding: 10px 20px;
+    width: 10%;
+    padding: 12px 10px;
     border-radius: 5px;
     cursor: pointer;
     align-self: flex-end;
-    margin-top: 20px;
 }
 
-button.save:hover{
+#save:hover{
     background-color: #48377d;
     color: white;
 }
 
+/* Make form responsive for smaller screens */
+@media (max-width: 768px) {
 
+    .menu{
+        height: 140vh;
+    }
+
+    .form-container {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .form-left,
+    .form-right {
+        width: 100%; 
+        padding: 0; 
+    }
+
+    .form-right {
+        padding-top: 0; 
+    }
+
+    button.save {
+        width: 100%; 
+        text-align: center;
+    }
+}
 
 
 
