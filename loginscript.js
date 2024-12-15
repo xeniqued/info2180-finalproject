@@ -1,8 +1,9 @@
-function hidepassword() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textarea = document.getElementById('password');
+  textarea.addEventListener('input', (event) => {
+  const currentLength = event.target.value.length;
+  textarea.value = '*'.repeat(currentLength);
+});
+});
