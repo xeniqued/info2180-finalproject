@@ -10,9 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
   //login button functionality
   const login = document.getElementById('loginbutton');
   login.addEventListener('click', Userlogin);
+  const useremail =document.getElementById('email');
+  const userpassword = document.getElementById('password');
+  useremail.addEventListener("input", EmailVerification);
+  userpassword.addEventListener("input", PasswordVerification);
 
+  function EmailVerification(){
+
+  }
+  
   function Userlogin(){
-    
-    alert("Password is incorrect. Please try again");
+    /*if ((EmailVerification()== true) && (PasswordVerification()== true)){
+      window.location.assign("dashboard.html");
+    }*/
+    window.location.assign("dashboard.html");
+
+
+   // alert("Password is incorrect. Please try again");
   }
 });

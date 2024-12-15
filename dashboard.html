@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Dolphin CRM </title>
+        <link rel="stylesheet" href="dashboard-styles.css">
+        <script src="dashboard-implementation.js" defer ></script>
+    </head>
+    <body>
+         <!-- Header -->
+
+         <header id = "header">
+            <div class = "logo">
+                <img src = "dolphin.png" alt = "Dolphin Logo" width = "30px" height = "25px" align = "center">Dolphin CRM
+            </div>
+        </header>
+
+        <div class="flex-container"> 
+
+            <!-- Adding the left side Navigation -->
+            <aside class = "menu">
+                <nav>
+                    <ul>
+                        <!-- Adding the page links to the menu  -->
+                        <li> <a href="#"> <img src = "home.png" alt = "Home" width=" 15px" height = "15px"> Home </a> </li>
+                        <li> <a href = "#"> <img src=" new_contact.png" alt = "New Contact" width=" 16px" height = "15px"> New Contact </a></li>
+                        <li> <a href = "#"> <img src = "users.png" alt = "Users" width=" 15px" height = "15px"> Users </a></li>
+                        <hr>
+                        <li> <a href = "#"> <img src = "logout.png" alt = "Logout" width=" 15px" height = "15px"> Logout </a></li>
+    
+                    </ul>
+                </nav>
+
+            </aside>
+            
+            <!-- Adding the main page content -->
+            <div class = "main-content">
+
+                <!--  Headers for the dashboard -->
+                <div class = "header-main">
+                    <h1> Dashboard </h1>
+                    <button class = "add-contact"> <img src = "plus.png" alt = "Add Contact" width = "15px" height = "16px" align="center"> &nbsp; Add Contact </button>
+                </div>
+
+
+                <div class = "data-section">
+                    <!-- Adding the filter section  -->
+                    <div class = "filters">
+                        <span> <img src = "filter.png" alt = "Filter" width = "15px" height = "15px"> Filter By:  &nbsp; </span>
+                        <a href="#" class=" filter-option  active" data-filter = "all">  All</a>
+                        <a href="#" class = "filter-option" data-filter="sales-lead"> Sales Leads </a>
+                        <a href="#"class = "filter-option" data-filter="support"> Support </a>
+                        <a href="#" class = "filter-option" data-filter="assigned-to-me"> Assigned to me </a>
+                    </div>
+
+                    <!-- Adding the table -->
+                    <div class = "data-table-section">
+                        <table class = "data-table">
+                            <thead>
+                                <tr> 
+                                    <th> Name </th>
+                                    <th> Email </th>
+                                    <th> Company </th>
+                                    <th id = "type"> Type </th>
+                                    <th>      </th>
+                                </tr>
+                            </thead>
+                
+                            <tbody>
+                                <!-- Data from SQL database will go here -->
+                                <!-- Example data here for now -->
+                                <tr class = "table-row" data-type = "sales-lead">
+                                    <td id = "name" >Mr. Michael Scott</td>
+                                    <td id = "row-format">michael.scott@paper.co</td>
+                                    <td id = "row-format">The Paper Company</td>
+                                    <td id = "type"><span class="badge sales-lead">SALES LEAD</span></td>
+                                    <td id = "view"> <a href = "#">  View </a></td>
+                                </tr>
+                                <tr class = "table-row" data-type = "support">
+                                    <td id = "name">Mr. Dwight Shrute</td>
+                                    <td id = "row-format">dwight.shrute@paper.co</td>
+                                    <td id = "row-format">The Paper Company</td>
+                                    <td id = "type"><span class="badge support">SUPPORT</span></td>
+                                    <td id = "view"> <a href = "#"> View </a> </td>
+                                </tr>
+                                <tr class = "table-row" data-type = "support">
+                                    <td id = "name" > Ms. Pam Beesley</td>
+                                    <td id = "row-format">pam.beesley@dunder.co</td>
+                                    <td id = "row-format">Dunder Mifflin</td>
+                                    <td id = "type"><span class="badge support">SUPPORT</span></td>
+                                    <td id = "view"> <a href = "#"> View </a> </td>
+                                </tr>
+                                <tr class = "table-row" data-type = "sales-lead">
+                                    <td id = "name" >Ms. Angela Martin</td>
+                                    <td id = "row-format">angela.martin@vance.co</td>
+                                    <td id = "row-format">Vance Refrigeration </td>
+                                    <td id = "type"><span class="badge sales-lead">SALES LEAD</span></td>
+                                    <td id = "view"> <a href = "#"> View </a> </td>
+                                </tr>
+                                <tr class = "table-row" data-type = "support">
+                                    <td id = "name" >Ms. Kelly Kapoor</td>
+                                    <td id = "row-format">kelly.kapoor@vance.co</td>
+                                    <td id = "row-format">Vance Refrigeration</td>
+                                    <td id = "type"><span class="badge support">SUPPORT</span></td>
+                                    <td id = "view">  <a href = "#"> View </a> </td>
+                                </tr>
+                                <tr class = "table-row" data-type = "sales-lead">
+                                    <td id = "name" >Mr. Jim Halpert</td>
+                                    <td id = "row-format">jim.halpert@dunder.co</td>
+                                    <td id = "row-format">Dunder Mifflin</td>
+                                    <td id = "type"><span class="badge sales-lead">SALES LEAD</span></td>
+                                    <td id = "view">  <a href = "#"> View </a> </td>
+                                </tr>
+
+                            </tbody>
+                            
+                            
+                        </table>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
