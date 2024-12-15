@@ -26,7 +26,7 @@
 }*/
 header{
     display: flex;
-    height: 50px;
+    height: 70px;
     justify-content: space-between;
     align-items: center;
     background-color: #1a252f;
@@ -104,7 +104,7 @@ input[type=submit] {
     background-color: rgba(79,70,229,255);
     align-self: center;
     color: white;
-    width: 102%;
+    width: 507px;
     height: 45px;
     padding: 8px 10px;
     /*padding-right: 6px;*/    
@@ -116,7 +116,7 @@ input[type=submit] {
 }
 
 textarea{
-    width: 100%;
+    width: 500px;
     height: 15px;
     font-size: 12px;
     /*padding: 12px 20px;*/
@@ -125,6 +125,7 @@ textarea{
     background-color: white;
     resize: none;
     border-radius: 4px;
+    margin: auto;
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
