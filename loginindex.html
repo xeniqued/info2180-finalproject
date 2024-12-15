@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="loginstyles.css"> 
+    <script src="loginscript.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <header id = "header">
+        <div class = "logo">
+            <img src = "dolphin.png" alt = "Dolphin Logo" width = "30px" height = "25px" align = "center">Dolphin CRM
+        </div>
+    </header>
+    <main>
+       <!-- <div class="flex-container">
+        </div><h2>Login</h2></div>
+        </div>-->
+        <div class="flex-container">
+            <div id="logintitle"><h2>Login</h2></div>
+            <form action="action.php" method="post">
+                <div><textarea name="email" id="email" placeholder="Email address" rows="1" cols="50"></textarea></div>
+                <div><textarea type = "password" name="password" id="password" placeholder="Password" rows="1" cols="50"></textarea></div>
+                <div id="loginbutton" >
+                    <img src="locklogin.png" alt="loginscript.png" width="20px" height="">
+                    <input type="submit" value="Login" id="submitbtn" /> 
+                </div>
+               </form>
+        </div>
+        
+        
+    </main>
+    <footer>
+        <p>Copyright &copy; 2022 Dolphin CRM.</p>
+    </footer>
+</body>
+</html>
