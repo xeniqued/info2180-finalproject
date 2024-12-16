@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin CRM</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
     <script src="dashboard-implementation.js" defer ></script>
 </head>
 <body>
@@ -78,13 +78,18 @@
                 <div class="profile-info">
                     <img src="notes.png" alt="notes icon" class="notes">
                     <h4>Notes</h4><br><hr>
+                    <div class="actualnotes">
+                      
+                    </div>
                 </div>
             </div>
             <div class="contact-note">
-                <form>
-                  <label for="note-title" class="cwidth">Add a note about:</label><br>
-                  <textarea id="note-text" name="note-text" class="cwidth">Enter details here</textarea>
-                </form>
+              <div id="notes-container"></div>
+              <form id="add-note-form">
+                  <label for="note-text" id="note-label" class="cwidth">Add a note about:</label><br>
+                  <textarea id="noteContent" name="note-text" class="cwidth" placeholder="Enter note details here"></textarea><br>
+                  <button type="button" id="submitNote">Save Note</button>
+              </form>
             </div>
           </div>
 </body>

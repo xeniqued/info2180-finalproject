@@ -69,14 +69,14 @@ INSERT INTO Contacts (title, firstname, lastname, email, telephone, company, typ
 ('Mr.', 'Creed', 'Bratton', 'creed.bratton@dundermifflin.com', '555-1111', 'Dunder Mifflin Paper Co.', 'Support', 'Jennifer Johnson', 4, '2024-06-06 19:30:00', '2024-06-06 20:00:00');
 
 INSERT INTO Notes (contact_id, comment, created_by, created_at) VALUES
-(1, 'Followed up with Michael regarding bulk paper order. He mentioned needing time to decide.', 3, '2024-06-06 09:45:00'),
-(2, 'Dwight expressed interest in additional beet supplies for his farm.', 4, '2024-06-06 10:00:00'),
-(3, 'Pam is exploring new designs for the company letterhead. Awaiting feedback.', 1, '2024-06-06 11:30:00'),
-(4, 'Jim confirmed the next client meeting for Friday at 3 PM.', 3, '2024-06-06 12:15:00'),
-(5, 'Angela approved the latest expense reports but requested additional receipts.', 7, '2024-06-06 13:30:00'),
-(6, 'Kevin asked for a follow-up on his outstanding invoice for catering services.', 9, '2024-06-06 14:20:00'),
-(7, 'Stanley is uninterested in attending the sales seminar but will reconsider next month.', 1, '2024-06-06 15:00:00'),
-(8, 'Kelly suggested a new marketing plan but is waiting for Ryan’s approval.', 9, '2024-06-06 16:30:00'),
-(9, 'Ryan provided an updated report on the Temp Agency’s recent performance.', 10, '2024-06-06 17:00:00'),
-(10, 'Jan discussed restructuring plans for the corporate office. Notes sent to Michael for review.', 1, '2024-06-06 18:30:00'),
-(11, 'Creed shared an unusual request for paper delivery—no further details provided.', 4, '2024-06-06 19:15:00');
+(1, 'Followed up with Michael regarding bulk paper order. He mentioned needing time to decide.', 'Jen Levison', '2024-06-06 09:45:00'),
+(2, 'Dwight expressed interest in additional beet supplies for his farm.', 'Morris Dawman', '2024-06-06 10:00:00'),
+(3, 'Pam is exploring new designs for the company letterhead. Awaiting feedback.', 'Gilbert Rawford', '2024-06-06 11:30:00'),
+(4, 'Jim confirmed the next client meeting for Friday at 3 PM.', 'Schumann Kaul', '2024-06-06 12:15:00'),
+(5, 'Angela approved the latest expense reports but requested additional receipts.', 'Sylvestor Stalling', '2024-06-06 13:30:00'),
+(6, 'Kevin asked for a follow-up on his outstanding invoice for catering services.', 'Gammah Mason', '2024-06-06 14:20:00'),
+(7, 'Stanley is uninterested in attending the sales seminar but will reconsider next month.', 'Paul Peters', '2024-06-06 15:00:00'),
+(8, 'Kelly suggested a new marketing plan but is waiting for Ryan’s approval.', 'Stephen Hawker', '2024-06-06 16:30:00'),
+(9, 'Ryan provided an updated report on the Temp Agency’s recent performance.', 'Jewel Nice', '2024-06-06 17:00:00'),
+(10, 'Jan discussed restructuring plans for the corporate office. Notes sent to Michael for review.', 'Carl Barter', '2024-06-06 18:30:00'),
+(11, 'Creed shared an unusual request for paper delivery—no further details provided.', 'Jennifer Johnson', '2024-06-06 19:15:00');

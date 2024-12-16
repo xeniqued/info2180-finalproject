@@ -1,3 +1,4 @@
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
@@ -35,16 +36,19 @@ body{
 
 .menu {
     display: flex;
-    width: 15%; 
-    height: 100vh;
-    padding-right: 5px;
+    flex-direction: column;
+    min-width: 10%;
+    height: 120vh;
+    position:auto;
+    padding-right: 20px;
+    padding-bottom: 0%;
     background-color: #FFFFFF;
     border-right: 1px solid #ccc;
     font-family:'Arial', sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: black;
-    min-width: 200px;
+    
 
 }
 
@@ -84,44 +88,6 @@ li img{
 
 
 /* Main Content */
-.in-line-container {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; /* Space between left and right sections */
-}
-
-.in-line {
-    margin: 0; /* Remove extra margin from the heading */
-    padding: 10px;
-}
-
-.profile-info {
-    display: flex; /* Group icon and name */
-    align-items: center;
-    gap: 10px; /* Space between icon and name */
-}
-
-.profile-image {
-    width: 60px;
-    height: auto;
-}
-
-.buttons {
-    display: flex; /* Group buttons */
-    gap: 10px; /* Space between buttons */
-}
-
-button {
-    display: flex; 
-    align-items: center; 
-    gap: 8px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f5f5f5;
-    cursor: pointer;
-}
 
 /* Styling the main content */
 .main-content {
@@ -131,23 +97,6 @@ button {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-}
-
-.assign {
-    background-color: rgb(2, 167, 2);
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.switch {
-    background-color: orange;
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.button-icon {
-    width: auto;
-    height: 20px;
 }
 
 /* Styling the header for this section */
@@ -165,82 +114,9 @@ button {
     align-items: center;
 }
 
-.bio-section {
-    width: 90%;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.notes-section {
-    width: 90%; 
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
-}
-
-.contact-row {
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-start; 
-}
-
-.contact-item {
-    flex: 1; 
-    margin-right: 10px; 
-}
-
-.contact-note {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgb(212, 212, 212);
-}
-
-.cwidth {
-    font-weight: bold;
-    width: 100%;
-}
-
-.label {
-    font-weight: bold; 
-    display: block; 
-    margin-bottom: 5px;
-}
-
-.email-value, .telephone-value,
-.company-value, .assignedto-value {
-    display: block; /* Ensures the value is on its own line */
-}
-
-p {
-    color: grey;
-    line-height: 1.4;
-    margin: 0 0 10px;
-    font-size: 14px;
-    padding-left: 70px;
-    display: flex;
-}
-
-.notes {
-    width: 20px;
-    height: 20px;
-}
 
 /* Styling the add contact button */
-.add-user {
+.add-contact  {
     background-color: #5129e3;
     text-decoration: none;
     text-align: center;
@@ -253,7 +129,7 @@ p {
 }
 
 /* Styling the add contact button when hovering */
-.add-user:hover{
+.add-contact:hover{
     background-color: #48377d;
     color: white;
 }
@@ -265,7 +141,36 @@ p {
     background-color: #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: #5129e3;
+}
+
+/* Styling the filter section */
+.filters {
+    margin: 20px;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+.filters span {
+    font-weight: bold;
+}
+
+/* Styling the filter links */
+
+.filters a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #959b9f;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.filters a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 10px; 
+    color: #5129e3;
+    
 }
 
 
@@ -301,6 +206,9 @@ p {
     word-wrap: break-word;
 }
 
+.data-table #type{
+    text-align: center;
+}
 
 #name{
     font-family: Arial, Helvetica, sans-serif;
@@ -316,6 +224,13 @@ p {
     text-align: left;
 }
 
+#view a{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#5129e3;
+    text-decoration: none;
+
+}
+
 
 .data-table th {
     background-color: #f4f4f4;
@@ -324,4 +239,26 @@ p {
     font-size: 16px;
     font-weight: bold;
     color: black;
+}
+
+
+/* Styling the information in the table */
+.data-table td .badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.badge.sales-lead {
+    background-color: #ffd341;
+    color: black;
+}
+
+.badge.support {
+    background-color: #4d41d3;
+    color: white;
 }

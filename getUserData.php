@@ -31,8 +31,8 @@ try {
                 echo json_encode(["success" => false, "error" => "Invalid user ID"]);
                 exit;
             }            
-    
-            // Prepare and execute the SQL statement
+
+            // Prepare and execute the SQL statement to get user data
             $sql = "SELECT firstname, lastname, email, telephone, company, assigned_to, created_at, updated_at FROM contacts WHERE id = :userId";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':userId', $userId, PDO::PARAM_INT);
@@ -42,8 +42,7 @@ try {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
             if ($user) {
-                $created_at = new DateTime($user['created_at']);
-                $updated_at = new DateTime($user['updated_at']);
+                // If user is found, return the user data
                 echo json_encode([
                     "success" => true,
                     "name" => $user['firstname'] . ' ' . $user['lastname'], // Combined first and last name
@@ -54,6 +53,22 @@ try {
                     "created_at" => $user['created_at'], // already formatted as a string
                     "updated_at" => $user['updated_at'], // already formatted as a string
                 ]);
+                
+                // Now check if the note content is provided (via POST request)
+                if (isset($_POST['content']) && !empty($_POST['content'])) {
+                    $content = $_POST['content']; // Get the content of the note
+
+                    // Insert the note into the database
+                    $sql2 = "INSERT INTO notes (user_id, content, created_at) VALUES (:userId, :content, NOW())";
+                    $stmt2 = $conn->prepare($sql2);
+                    $stmt2->bindParam(':userId', $userId, PDO::PARAM_INT);
+                    $stmt2->bindParam(':content', $content, PDO::PARAM_STR);
+                    $stmt2->execute();
+
+                    // Confirm note insertion
+                    echo json_encode(["success" => true, "message" => "Note added successfully"]);
+                }
+    
             } else {
                 error_log("User not found for ID: " . $userId); // Debugging output
                 echo json_encode(["success" => false, "error" => "User not found"]);

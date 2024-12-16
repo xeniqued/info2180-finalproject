@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    //code
     const urlParams = new URLSearchParams(window.location.search);
     const userId = urlParams.get("user");
     console.log("User ID:", userId);
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.querySelector(".telephone-value").textContent = user.telephone || "N/A";
                     document.querySelector(".company-value").textContent = user.company || "N/A";
                     document.querySelector(".assignedto-value").textContent = user.assigned_to || "N/A";
+                    document.querySelector("actualnotes").textContent = user.comment || "N/A";
 
                     // Format and display dates
                     const createdDate = formatDate(data.created_at);
@@ -48,4 +50,40 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         alert("No user specified");
     }
+
+    const submitNoteButton = document.getElementById("submitNote");
+    const noteContent = document.getElementById("noteContent");
+
+    submitNoteButton.addEventListener("click", () => {
+        const content = noteContent.value.trim();
+
+        // Ensure the note content is not empty
+        if (content !== "") {
+            fetch("addNote.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    content: content
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Note added successfully!");
+                    noteContent.value = ""; // Clear the textarea
+                } else {
+                    alert("Failed to add note.");
+                }
+            })
+            .catch(err => {
+                console.error("Error:", err);
+                alert("An error occurred while adding the note.");
+            });
+        } else {
+            alert("Please enter a note.");
+        }
+    });
 });
