@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Dolphin CRM </title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="new-users.js" defer ></script>
+    </head>
+    <body>
+         <!-- Header -->
+
+         <header id = "header">
+            <div class = "logo">
+                <img src = "dolphin.png" alt = "Dolphin Logo" width = "30px" height = "25px" align = "center">Dolphin CRM
+            </div>
+        </header>
+
+        <div class="flex-container"> 
+
+            <!-- Adding the left side Navigation -->
+            <aside class = "menu">
+                <nav>
+                    <ul>
+                        <!-- Adding the page links to the menu  -->
+                        <li> <a href="#"> <img src = "home.png" alt = "Home" width=" 15px" height = "15px"> Home </a> </li>
+                        <li> <a href = "#"> <img src=" new_contact.png" alt = "New Contact" width=" 16px" height = "15px"> New Contact </a></li>
+                        <li> <a href = "#"> <img src = "users.png" alt = "Users" width=" 15px" height = "15px"> Users </a></li>
+                        <hr id = "line">
+                        <li> <a href = "#"> <img src = "logout.png" alt = "Logout" width=" 15px" height = "15px"> Logout </a></li>
+    
+                    </ul>
+                </nav>
+
+            </aside>
+            
+            <!-- Adding the main page content -->
+            <div class = "main-content">
+                <!--  Headers for the dashboard -->
+                <div class = "header-main">
+                    <h1> New Contact </h1>
+                </div>
+
+                <!-- Adding the data section  -->
+                <div class = "data-section">
+
+                    <!-- Left side form items -->
+                    <form class = "form-container">
+                        <div class = "form-left">
+                            <label> Title 
+                                    <select  id = "select" name = "title" required>
+                                        <option value = "Mr"> Mr </option>
+                                        <option value = "Ms"> Ms </option>
+                                        <option value = "Mrs"> Mrs </option>
+                                    </select>
+                            </label>
+                            
+                            <label for = "fname"> First Name 
+                                <input type = "text" id="fname" class = "fname" placeholder = "Jane" name="fname" required>
+                            </label>  
+                            
+                            <label for = "email">Email 
+                                <input type = "email" name='email' id = "email" placeholder = "something@example.com" required>
+                            </label> 
+
+                            <label for = "company">Company
+                                <input type = "text" id = "company" name='company' required>
+                            </label>  
+
+                            <label for = "assigned">Assigned To 
+                                <select id = "assigned-select" name='assigned' required>
+                                    <option value = "admin"> Andy Bernard </option>
+                                    <option value = "Jane Doe"> Jane Doe </option>
+                                </select>
+                            </label> 
+                        </div>
+
+                    
+                        
+
+                        <!-- Right side form items -->
+                        <div class = "form-right">
+                            <label for = "lname" >Last Name 
+                                <input type = "text" id = "lname" name='lname' placeholder = "Doe" required>
+                            </label>
+
+                            <label for = "phone">Telephone
+                                <input type = "tel" id = "phone" name='phone' required>
+                            </label>  
+
+                            <label for = "type" >Type
+                                <select id = "type-select" name = "type" required>
+                                    <option value = "Sales Lead"> Sales Lead </option>
+                                    <option value = "Support"> Support </option>
+                                </select>
+                            </label> 
+
+                    </form>
+                        
+                    <!-- Adding the save button -->
+                    <div id = "savebutton">
+                        <button class = 'save' id='save'> Save </button>
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
