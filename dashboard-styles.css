@@ -1,0 +1,264 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Style the header */
+#header{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a252f;
+    text-align: left;
+    color: white;
+}
+
+.logo{
+    font-size: 14px;
+    text-align: left;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 10%;
+    height: 120vh;
+    position:auto;
+    padding-right: 20px;
+    padding-bottom: 0%;
+    background-color: #FFFFFF;
+    border-right: 1px solid #ccc;
+    font-family:'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    
+
+}
+
+/* Styling the images in the left side navigation */
+li img{
+    margin-right: 7px;
+    padding-top:10px;
+}
+
+/* Styling the navigation links */
+.menu ul{
+    list-style: none;
+}
+
+.menu li{
+    margin: 5px;
+    padding-right: 20px;
+}
+
+/* Styling the navigation links text */
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    align-items: baseline;
+    display: flex;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 0%;
+}
+
+/* Styling a color change when hovering */
+.menu a:hover {
+    color: #4687c7;
+    text-decoration: none;
+}
+
+
+/* Main Content */
+
+/* Styling the main content */
+.main-content {
+    width: 85%;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling the header for this section */
+.header-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-main h1 {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Styling the add contact button */
+.add-contact  {
+    background-color: #5129e3;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Styling the add contact button when hovering */
+.add-contact:hover{
+    background-color: #48377d;
+    color: white;
+}
+
+/* Styling the data section */
+.data-section{
+    margin-left: 25px;
+    margin-right: 5px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the filter section */
+.filters {
+    margin: 20px;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+.filters span {
+    font-weight: bold;
+}
+
+/* Styling the filter links */
+
+.filters a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #959b9f;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.filters a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 10px; 
+    color: #5129e3;
+    
+}
+
+
+/* Table */
+
+.data-table-section {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%-40px);
+    padding: 20px;
+    overflow-x: auto;
+    border-radius: 10px;
+    
+}
+
+.data-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: white;
+    table-layout: auto;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.data-table th,
+.data-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+.data-table #type{
+    text-align: center;
+}
+
+#name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+
+#row-format{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #717374;
+    text-align: left;
+}
+
+#view a{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#5129e3;
+    text-decoration: none;
+
+}
+
+
+.data-table th {
+    background-color: #f4f4f4;
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* Styling the information in the table */
+.data-table td .badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.badge.sales-lead {
+    background-color: #ffd341;
+    color: black;
+}
+
+.badge.support {
+    background-color: #4d41d3;
+    color: white;
+}
