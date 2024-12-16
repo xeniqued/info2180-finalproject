@@ -33,11 +33,11 @@ echo "<table class = 'data-table'>
                 <th id = 'type'> Type </th>
             </tr>";
     while ($row = $results->fetch_assoc()) {
-        echo "<tr>
+        echo "<tr class = 'table-row' data-type = '".htmlspecialchars($row['type'])."'>
                 <td>" . htmlspecialchars($row['title']) . "</td>
                 <td>" . htmlspecialchars($row['email']) . "</td>
                 <td>" . htmlspecialchars($row['company']) . "</td>
-                <td>" . htmlspecialchars($row['type']) . "</td>
+                <td>".htmlspecialchars($row['type'])."</td>
               </tr>";
     }
     echo "</table>";
