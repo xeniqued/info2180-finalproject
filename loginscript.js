@@ -2,29 +2,45 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   //masking the password
-  const textarea = document.getElementById('password');
+ /* const textarea = document.getElementById('password');
   textarea.addEventListener('input', (event) => {
   const currentLength = event.target.value.length;
   textarea.value = '*'.repeat(currentLength);
-});
+});*/
   //login button functionality
-  const login = document.getElementById('loginbutton');
-  login.addEventListener('click', Userlogin);
-  const useremail =document.getElementById('email');
+
+const form = document.getElementById('form');
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevents the page from reloading
+  /*const useremail = document.getElementById('email');
+  const email = useremail.value; // Updates the email variable
+  console.log(email); // Logs the updated email value
   const userpassword = document.getElementById('password');
-  useremail.addEventListener("input", EmailVerification);
-  userpassword.addEventListener("input", PasswordVerification);
-
-  function EmailVerification(){
-
-  }
-
-  function PasswordVerification(){
-
-  }
+  const password = userpassword.value; // Updates the email variable
+  console.log(password); */
+  Verification();
+});
   
+  
+  /*const login = document.getElementById('loginbutton');
+  login.addEventListener('click', PrintEmail);
+  const useremail =document.getElementById('email');
+  console.log(12345678);
+  const userpassword = document.getElementById('password');
+  /*useremail.addEventListener("input", EmailVerification);
+  userpassword.addEventListener("input", PasswordVerification);
+*/
+  async function Verification(){
+    const checkemail = await fetch('login.php');
+    const rsp = await checkemail.text();
+    console.log(rsp);
+    
+  }
+
+
   function Userlogin(){
-    const validity = `${EmailVerification()}+${PasswordVerification}`; //check for the return values of the password and email checks
+    //const validity = `${EmailVerification()}+${PasswordVerification}`; //check for the return values of the password and email checks
 
     switch (validity){
       case "true+true":
